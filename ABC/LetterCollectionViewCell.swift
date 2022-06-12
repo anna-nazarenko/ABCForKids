@@ -9,15 +9,14 @@ import UIKit
 
 class LetterCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var letterLabel: UILabel! {
-        didSet {
-            letterLabel.text = "A"
-        }
-    }
+    @IBOutlet weak var letterLabel: UILabel!
+    
+    static let identifier = "letterCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
 
 }

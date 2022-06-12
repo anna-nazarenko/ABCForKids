@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.register(UINib(nibName: "LetterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(LetterCollectionViewCell.self, forCellWithReuseIdentifier: "letterCell")
+        
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -22,16 +26,16 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "letterCell", for: indexPath) as? LetterCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LetterCollectionViewCell.identifier, for: indexPath) as? LetterCollectionViewCell else {
             print("No cell")
             return UICollectionViewCell()
         }
         cell.backgroundColor  = .blue
- //       cell.letterLabel.text = "A"
+        cell.letterLabel.text = "A"
         return cell
     }
 }
