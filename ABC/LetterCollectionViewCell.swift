@@ -9,7 +9,11 @@ import UIKit
 
 class LetterCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var letterLabel: UILabel!
+    @IBOutlet weak var letterLabel: UILabel! {
+        didSet {
+            letterLabel.text = "A"
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
