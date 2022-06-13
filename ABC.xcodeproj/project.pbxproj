@@ -43,6 +43,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		774C9E4D2857A0C700796147 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				775C064C28547F7400F1F0D4 /* AppDelegate.swift */,
+				775C064E28547F7400F1F0D4 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		774C9E4E2857A0FD00796147 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77AC3801285752210029B5C3 /* LetterCard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		774C9E4F2857A12A00796147 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				775C065028547F7400F1F0D4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		774C9E502857A14900796147 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				775C065228547F7400F1F0D4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		774C9E512857A19100796147 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				775C06602854899F00F1F0D4 /* LetterCollectionViewCell.swift */,
+				775C06612854899F00F1F0D4 /* LetterCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		775C064028547F7400F1F0D4 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +104,11 @@
 		775C064B28547F7400F1F0D4 /* ABC */ = {
 			isa = PBXGroup;
 			children = (
-				775C064C28547F7400F1F0D4 /* AppDelegate.swift */,
-				775C064E28547F7400F1F0D4 /* SceneDelegate.swift */,
-				775C065028547F7400F1F0D4 /* ViewController.swift */,
-				775C065228547F7400F1F0D4 /* Main.storyboard */,
-				77AC3801285752210029B5C3 /* LetterCard.swift */,
-				775C06602854899F00F1F0D4 /* LetterCollectionViewCell.swift */,
-				775C06612854899F00F1F0D4 /* LetterCollectionViewCell.xib */,
+				774C9E4D2857A0C700796147 /* Application */,
+				774C9E4F2857A12A00796147 /* Controller */,
+				774C9E502857A14900796147 /* View */,
+				774C9E4E2857A0FD00796147 /* Model */,
+				774C9E512857A19100796147 /* Cell */,
 				775C065528547F7600F1F0D4 /* Assets.xcassets */,
 				775C065728547F7600F1F0D4 /* LaunchScreen.storyboard */,
 				775C065A28547F7600F1F0D4 /* Info.plist */,
