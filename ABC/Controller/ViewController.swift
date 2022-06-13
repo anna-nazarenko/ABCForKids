@@ -59,6 +59,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.letterLabel.text = alphabet[indexPath.row].letter
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
