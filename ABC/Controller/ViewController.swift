@@ -64,7 +64,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let width = collectionView.bounds.width
-            let numberOfItemsPerRow: CGFloat = 3
+            let numberOfItemsPerRow: CGFloat = 2
             let spacing: CGFloat = flowLayout.minimumInteritemSpacing
             let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
             let itemDimension = floor(availableWidth / numberOfItemsPerRow)
