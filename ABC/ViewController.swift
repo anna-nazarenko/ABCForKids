@@ -15,6 +15,9 @@ class ViewController: UIViewController {
         }
     }
     
+    var alphabet: [LetterCard] = []
+    let letters: [String] = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X", "Z"]
+    
     let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 5
@@ -25,16 +28,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
+        alphabet = alphabetGenerator()
+    }
+    
+    func alphabetGenerator() -> [LetterCard] {
+        var identifier = 0
+        alphabet = []
+        for letter in letters {
+            alphabet.append(LetterCard(identifier: identifier, letter: letter))
+            identifier += 1
+        }
+        return alphabet
     }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return alphabet.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,7 +56,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.backgroundColor  = .lightGray
-        cell.letterLabel.text = "A"
+        cell.letterLabel.text = alphabet[indexPath.row].letter
         return cell
     }
 }
