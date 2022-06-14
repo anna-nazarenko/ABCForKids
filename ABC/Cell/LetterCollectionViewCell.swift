@@ -15,7 +15,9 @@ class LetterCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let cellView = UIView(frame: bounds)
+        cellView.backgroundColor = .green
+        self.selectedBackgroundView = cellView
     }
     
 
