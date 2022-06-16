@@ -12,6 +12,7 @@ class LetterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var letterLabel: UILabel!
     
     static let identifier = "letterCell"
+    static let letterCellNibName = "LetterCollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
