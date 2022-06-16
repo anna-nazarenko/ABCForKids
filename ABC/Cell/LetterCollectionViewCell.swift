@@ -16,12 +16,12 @@ class LetterCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let cellView = UIView(frame: bounds)
-        cellView.backgroundColor = .green
-        self.selectedBackgroundView = cellView
     }
     
     func select() {
+        let cellView = UIView(frame: bounds)
+        cellView.backgroundColor = .green
+        self.selectedBackgroundView = cellView
         letterLabel.text = "✔️"
     }
 
