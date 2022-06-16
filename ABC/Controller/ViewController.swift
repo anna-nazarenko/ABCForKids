@@ -62,8 +62,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell {
-            print(indexPath)
-            cell.letterLabel.text = "✔️"
+            cell.select()
         }
     }
     

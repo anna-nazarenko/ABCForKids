@@ -21,5 +21,8 @@ class LetterCollectionViewCell: UICollectionViewCell {
         self.selectedBackgroundView = cellView
     }
     
+    func select() {
+        letterLabel.text = "✔️"
+    }
 
 }
