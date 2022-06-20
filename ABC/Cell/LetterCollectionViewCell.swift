@@ -18,11 +18,4 @@ class LetterCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func select() {
-        let cellView = UIView(frame: bounds)
-        cellView.backgroundColor = .green
-        self.selectedBackgroundView = cellView
-        letterLabel.text = "✔️"
-    }
-
 }
