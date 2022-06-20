@@ -14,8 +14,16 @@ class ViewController: UIViewController {
             collectionView.register(UINib(nibName: LetterCollectionViewCell.letterCellNibName, bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
         }
     }
+
+    @IBOutlet weak var letterFullScreenImageButton: UIButton!
+
+    @IBAction func touchLetterFullScreenImage(_ sender: UIButton) {
+        letterFullScreenImageButton.isHidden = true
+        collectionView.isHidden = false
+    }
     
     var alphabet: [LetterCard] = []
+    
     let letters: [String] = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X", "Z"]
     
     let flowLayout: UICollectionViewFlowLayout = {
@@ -30,7 +38,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        newGame()
+    }
+    
+    func newGame() {
         alphabet = alphabetGenerator()
+        letterFullScreenImageButton.isHidden = true
+        collectionView.isHidden = false
     }
     
     func alphabetGenerator() -> [LetterCard] {
@@ -61,9 +75,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell {
-            cell.select()
-        }
+        letterFullScreenImageButton.setImage(UIImage(named: "Stubs"), for: UIControl.State.normal)
+        letterFullScreenImageButton.isHidden = false
+        collectionView.isHidden = true
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
