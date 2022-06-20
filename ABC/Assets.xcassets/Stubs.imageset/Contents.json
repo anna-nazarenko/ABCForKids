@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ABCImageStub.png",
+      "filename" : "ABC.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ABCImageStub-1.png",
+      "filename" : "ABC-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ABCImageStub-2.png",
+      "filename" : "ABC-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
