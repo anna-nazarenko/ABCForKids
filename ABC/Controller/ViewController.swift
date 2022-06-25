@@ -24,8 +24,6 @@ class ViewController: UIViewController {
     
     var alphabet: [LetterCard] = []
     
-    let letters: [String] = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "X", "Z"]
-    
     let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 5
@@ -42,20 +40,11 @@ class ViewController: UIViewController {
     }
     
     func newGame() {
-        alphabet = alphabetGenerator()
+        alphabet = mockupData
         letterFullScreenImageButton.isHidden = true
         collectionView.isHidden = false
     }
     
-    func alphabetGenerator() -> [LetterCard] {
-        var identifier = 0
-        alphabet = []
-        for letter in letters {
-            alphabet.append(LetterCard(identifier: identifier, letter: letter, words: [Word(word: "something", image: UIImage(systemName: "flame")!)]))
-            identifier += 1
-        }
-        return alphabet
-    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -75,10 +64,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        letterFullScreenImageButton.setImage(UIImage(named: "Stubs"), for: UIControl.State.normal)
         letterFullScreenImageButton.isHidden = false
         collectionView.isHidden = true
-    }
+        for index in alphabet[indexPath.row].words.indices {
+            letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: UIControl.State.normal)
+            break
+            }
+        }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell {
