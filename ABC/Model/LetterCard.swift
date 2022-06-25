@@ -11,5 +11,5 @@ struct LetterCard {
     
     let identifier: Int
     var letter: String
-    
+    var words: [Word]
 }

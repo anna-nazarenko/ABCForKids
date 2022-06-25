@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         var identifier = 0
         alphabet = []
         for letter in letters {
-            alphabet.append(LetterCard(identifier: identifier, letter: letter))
+            alphabet.append(LetterCard(identifier: identifier, letter: letter, words: [Word(word: "something", image: UIImage(systemName: "flame")!)]))
             identifier += 1
         }
         return alphabet

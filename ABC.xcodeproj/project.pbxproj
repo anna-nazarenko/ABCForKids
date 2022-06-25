@@ -16,6 +16,8 @@
 		775C06622854899F00F1F0D4 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C06602854899F00F1F0D4 /* LetterCollectionViewCell.swift */; };
 		775C06632854899F00F1F0D4 /* LetterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775C06612854899F00F1F0D4 /* LetterCollectionViewCell.xib */; };
 		77AC3802285752210029B5C3 /* LetterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC3801285752210029B5C3 /* LetterCard.swift */; };
+		F08C33092867026600D33A94 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C33082867026600D33A94 /* Word.swift */; };
+		F08C330B286709FB00D33A94 /* MockupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C330A286709FB00D33A94 /* MockupData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		775C06602854899F00F1F0D4 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 		775C06612854899F00F1F0D4 /* LetterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterCollectionViewCell.xib; sourceTree = "<group>"; };
 		77AC3801285752210029B5C3 /* LetterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCard.swift; sourceTree = "<group>"; };
+		F08C33082867026600D33A94 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		F08C330A286709FB00D33A94 /* MockupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 		774C9E4E2857A0FD00796147 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F08C330A286709FB00D33A94 /* MockupData.swift */,
 				77AC3801285752210029B5C3 /* LetterCard.swift */,
+				F08C33082867026600D33A94 /* Word.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,7 +194,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08C330B286709FB00D33A94 /* MockupData.swift in Sources */,
 				775C06622854899F00F1F0D4 /* LetterCollectionViewCell.swift in Sources */,
+				F08C33092867026600D33A94 /* Word.swift in Sources */,
 				77AC3802285752210029B5C3 /* LetterCard.swift in Sources */,
 				775C065128547F7400F1F0D4 /* ViewController.swift in Sources */,
 				775C064D28547F7400F1F0D4 /* AppDelegate.swift in Sources */,
