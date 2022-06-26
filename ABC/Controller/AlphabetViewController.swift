@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlphabetViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return alphabet.count
@@ -63,7 +63,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         letterFullScreenImageButton.isHidden = false
         collectionView.isHidden = true
         for index in alphabet[indexPath.row].words.indices {
-            letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: UIControl.State.normal)
+            letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: .normal)
             break
             }
         }
@@ -75,7 +75,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension AlphabetViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let width = collectionView.bounds.width
             let numberOfItemsPerRow: CGFloat = 2
