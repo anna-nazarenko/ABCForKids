@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(UINib(nibName: LetterCollectionViewCell.letterCellNibName, bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
+            collectionView.delegate = self
+            collectionView.dataSource = self
         }
     }
 
@@ -34,12 +36,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        newGame()
-    }
-    
-    func newGame() {
         alphabet = mockupData
         letterFullScreenImageButton.isHidden = true
         collectionView.isHidden = false
