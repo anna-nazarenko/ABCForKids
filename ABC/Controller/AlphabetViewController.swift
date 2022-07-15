@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import AVFoundation
+
+var audioPlayer: AVAudioPlayer?
 
 class AlphabetViewController: UIViewController {
 
@@ -41,6 +44,19 @@ class AlphabetViewController: UIViewController {
         collectionView.isHidden = false
     }
     
+    func playSound() {
+        guard let path = Bundle.main.path(forResource: "sound-a-ru", ofType: "mp3") else {
+                print("Test")
+                return
+        }
+        let url = URL(fileURLWithPath: path)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer!.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -64,6 +80,7 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
         collectionView.isHidden = true
         for index in alphabet[indexPath.row].words.indices {
             letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: .normal)
+            playSound()
             break
             }
         }

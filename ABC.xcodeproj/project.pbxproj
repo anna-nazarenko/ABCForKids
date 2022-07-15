@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770A03CD287A17440057B468 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770A03CC287A17440057B468 /* AVFoundation.framework */; };
 		775C064D28547F7400F1F0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C064C28547F7400F1F0D4 /* AppDelegate.swift */; };
 		775C064F28547F7400F1F0D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C064E28547F7400F1F0D4 /* SceneDelegate.swift */; };
 		775C065128547F7400F1F0D4 /* AlphabetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C065028547F7400F1F0D4 /* AlphabetViewController.swift */; };
@@ -15,12 +16,14 @@
 		775C065928547F7600F1F0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775C065728547F7600F1F0D4 /* LaunchScreen.storyboard */; };
 		775C06622854899F00F1F0D4 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C06602854899F00F1F0D4 /* LetterCollectionViewCell.swift */; };
 		775C06632854899F00F1F0D4 /* LetterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775C06612854899F00F1F0D4 /* LetterCollectionViewCell.xib */; };
+		776606D12881FD6B00544C5B /* sound-a-ru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 776606D02881FD6B00544C5B /* sound-a-ru.mp3 */; };
 		77AC3802285752210029B5C3 /* LetterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC3801285752210029B5C3 /* LetterCard.swift */; };
 		F08C33092867026600D33A94 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C33082867026600D33A94 /* Word.swift */; };
 		F08C330B286709FB00D33A94 /* MockupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C330A286709FB00D33A94 /* MockupData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770A03CC287A17440057B468 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		775C064928547F7400F1F0D4 /* ABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775C064C28547F7400F1F0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775C064E28547F7400F1F0D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		775C065A28547F7600F1F0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775C06602854899F00F1F0D4 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 		775C06612854899F00F1F0D4 /* LetterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LetterCollectionViewCell.xib; sourceTree = "<group>"; };
+		776606D02881FD6B00544C5B /* sound-a-ru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-a-ru.mp3"; sourceTree = "<group>"; };
 		77AC3801285752210029B5C3 /* LetterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCard.swift; sourceTree = "<group>"; };
 		F08C33082867026600D33A94 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		F08C330A286709FB00D33A94 /* MockupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupData.swift; sourceTree = "<group>"; };
@@ -41,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770A03CD287A17440057B468 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		770A03CB287A17440057B468 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				770A03CC287A17440057B468 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		774C9E4D2857A0C700796147 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 			children = (
 				775C064B28547F7400F1F0D4 /* ABC */,
 				775C064A28547F7400F1F0D4 /* Products */,
+				770A03CB287A17440057B468 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,11 +129,20 @@
 				774C9E502857A14900796147 /* View */,
 				774C9E4E2857A0FD00796147 /* Model */,
 				774C9E512857A19100796147 /* Cell */,
+				77BCA7EE2876F21B003AC462 /* Sounds */,
 				775C065528547F7600F1F0D4 /* Assets.xcassets */,
 				775C065728547F7600F1F0D4 /* LaunchScreen.storyboard */,
 				775C065A28547F7600F1F0D4 /* Info.plist */,
 			);
 			path = ABC;
+			sourceTree = "<group>";
+		};
+		77BCA7EE2876F21B003AC462 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				776606D02881FD6B00544C5B /* sound-a-ru.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				775C06632854899F00F1F0D4 /* LetterCollectionViewCell.xib in Resources */,
+				776606D12881FD6B00544C5B /* sound-a-ru.mp3 in Resources */,
 				775C065928547F7600F1F0D4 /* LaunchScreen.storyboard in Resources */,
 				775C065628547F7600F1F0D4 /* Assets.xcassets in Resources */,
 				775C065428547F7400F1F0D4 /* Main.storyboard in Resources */,
