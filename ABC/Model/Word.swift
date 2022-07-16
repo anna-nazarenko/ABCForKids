@@ -11,4 +11,5 @@ import UIKit
 struct Word {
     var word: String
     var image: UIImage
+    var sound: String = "sound-a-ru"
 }
