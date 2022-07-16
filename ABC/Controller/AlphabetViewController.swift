@@ -44,11 +44,9 @@ class AlphabetViewController: UIViewController {
         collectionView.isHidden = false
     }
     
-    func playSound() {
-        guard let path = Bundle.main.path(forResource: "sound-a-ru", ofType: "mp3") else {
-                print("Test")
-                return
-        }
+    func playSound(letterIndex: Int) {
+        let soundName = mockupData[letterIndex].words[0].sound
+        guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
         let url = URL(fileURLWithPath: path)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -78,12 +76,12 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         letterFullScreenImageButton.isHidden = false
         collectionView.isHidden = true
+        playSound(letterIndex: indexPath.row)
         for index in alphabet[indexPath.row].words.indices {
             letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: .normal)
-            playSound()
             break
-            }
         }
+    }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell {
