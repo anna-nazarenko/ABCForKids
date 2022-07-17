@@ -11,12 +11,12 @@ import UIKit
 let mockupData = [
     LetterCard(identifier: 0, letter: "A", words: [
         Word(word: "Апельсин", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru"),
-        Word(word: "Абрикос", image: UIImage(systemName: "ladybug.fill")!),
-        Word(word: "Акула", image: UIImage(systemName: "flame")!),
+        Word(word: "Абрикос", image: UIImage(named: "letter-b-ru")!),
+        Word(word: "Акула", image: UIImage(named: "letter-v-ru")!),
     ]),
     LetterCard(identifier: 1, letter: "Б", words: [
         Word(word: "Бабочка", image: UIImage(named: "letter-b-ru")!, sound: "sound-b-ru"),
-        Word(word: "Бинокль", image: UIImage(systemName: "leaf.circle")!),
+        Word(word: "Бинокль", image: UIImage(named: "letter-a-ru")!),
         Word(word: "Бобы", image: UIImage(systemName: "leaf.circle")!),
     ]),
     LetterCard(identifier: 2, letter: "В", words: [

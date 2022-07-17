@@ -11,6 +11,8 @@ import AVFoundation
 var audioPlayer: AVAudioPlayer?
 
 class AlphabetViewController: UIViewController {
+    
+    //MARK: Outlets
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -23,11 +25,22 @@ class AlphabetViewController: UIViewController {
     @IBOutlet weak var letterFullScreenImageButton: UIButton!
 
     @IBAction func touchLetterFullScreenImage(_ sender: UIButton) {
-        letterFullScreenImageButton.isHidden = true
-        collectionView.isHidden = false
+        let numberOfWords = mockupData[currentLetterIndex].words.count - 1
+        let wordIndex = tapCount(numberOfWords: numberOfWords)
+        if wordIndex <= numberOfWords {
+            letterFullScreenImageButton.setImage(alphabet[currentLetterIndex].words[wordIndex].image, for: .normal)
+        } else {
+            letterFullScreenImageButton.isHidden = true
+            collectionView.isHidden = false
+            tapCounter = 0
+        }
     }
     
+    //MARK: Properties
+    
     var alphabet: [LetterCard] = []
+    var currentLetterIndex: Int = 0
+    var tapCounter: Int = 0
     
     let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -37,12 +50,16 @@ class AlphabetViewController: UIViewController {
         return layout
     }()
     
+    //MARK: View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         alphabet = mockupData
         letterFullScreenImageButton.isHidden = true
         collectionView.isHidden = false
     }
+    
+    //MARK: Methods
     
     func playSound(letterIndex: Int) {
         let soundName = mockupData[letterIndex].words[0].sound
@@ -55,7 +72,15 @@ class AlphabetViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+    func tapCount(numberOfWords: Int) -> Int {
+        tapCounter += 1
+        return tapCounter
+    }
+    
 }
+
+//MARK: - Collection View Delegate/DataSource
 
 extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -74,6 +99,7 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentLetterIndex = indexPath.row
         letterFullScreenImageButton.isHidden = false
         collectionView.isHidden = true
         playSound(letterIndex: indexPath.row)
@@ -82,13 +108,9 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             break
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell {
-            cell.letterLabel.text = alphabet[indexPath.row].letter
-        }
-    }
 }
+
+//MARK: - Collection View Delegate Flow Layout
 
 extension AlphabetViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
