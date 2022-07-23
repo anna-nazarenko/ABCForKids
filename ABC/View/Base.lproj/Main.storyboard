@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Ds-LkZ">
-                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                                <rect key="frame" x="15" y="54" width="384" height="798"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -39,12 +39,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="trailing" secondItem="oRe-tA-ZsB" secondAttribute="trailing" id="2Se-ZV-VhY"/>
+                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-15" id="2Se-ZV-VhY"/>
                             <constraint firstItem="oRe-tA-ZsB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="INv-Mj-spG"/>
                             <constraint firstItem="oRe-tA-ZsB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="32" id="MHR-ra-FYI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BBa-Ds-LkZ" secondAttribute="bottom" constant="10" id="UmB-yV-cmi"/>
                             <constraint firstItem="oRe-tA-ZsB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vr4-L6-Rik"/>
-                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="leading" secondItem="oRe-tA-ZsB" secondAttribute="leading" id="cao-oC-Czc"/>
+                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cao-oC-Czc"/>
                             <constraint firstItem="BBa-Ds-LkZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ixo-NL-6O5"/>
                             <constraint firstItem="oRe-tA-ZsB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="rjN-to-xLA"/>
                         </constraints>

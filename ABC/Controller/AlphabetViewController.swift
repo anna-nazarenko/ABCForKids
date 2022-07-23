@@ -45,8 +45,6 @@ class AlphabetViewController: UIViewController {
     let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = 5
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         return layout
     }()
     
@@ -117,7 +115,7 @@ extension AlphabetViewController: UICollectionViewDelegateFlowLayout {
             let width = collectionView.bounds.width
             let numberOfItemsPerRow: CGFloat = 2
             let spacing: CGFloat = flowLayout.minimumInteritemSpacing
-            let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
+            let availableWidth = width - spacing * (numberOfItemsPerRow)
             let itemDimension = floor(availableWidth / numberOfItemsPerRow)
             return CGSize(width: itemDimension, height: itemDimension)
         }
