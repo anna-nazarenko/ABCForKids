@@ -17,9 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="204" height="182"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АВС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-uf-Qg8">
-                        <rect key="frame" x="-52" y="8.5" width="308" height="165.5"/>
-                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="136"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-uf-Qg8">
+                        <rect key="frame" x="59.5" y="24" width="85.5" height="134"/>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="110"/>
                         <color key="textColor" name="Yellow"/>
                         <nil key="highlightedColor"/>
                     </label>
