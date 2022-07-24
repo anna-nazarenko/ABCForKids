@@ -132,10 +132,10 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension AlphabetViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let numberOfItemsPerRow: CGFloat = 2
-            let spacing: CGFloat = flowLayout.minimumInteritemSpacing
-            let availableWidth = collectionView.bounds.width - spacing * (numberOfItemsPerRow + 1)
-            let itemDimension = floor(availableWidth / numberOfItemsPerRow)
-            return CGSize(width: itemDimension, height: itemDimension)
-        }
+        let numberOfItemsPerRow: CGFloat = 2
+        let spacing: CGFloat = flowLayout.minimumInteritemSpacing
+        let availableWidth = collectionView.bounds.width - spacing * (numberOfItemsPerRow + 1)
+        let itemDimension = floor(availableWidth / numberOfItemsPerRow)
+        return CGSize(width: itemDimension, height: itemDimension)
+    }
 }
