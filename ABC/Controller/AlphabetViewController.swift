@@ -43,9 +43,12 @@ class AlphabetViewController: UIViewController {
     var tapCounter: Int = 0
     
     let flowLayout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 5
-        return layout
+        let flowLayout = UICollectionViewFlowLayout()
+        let spacing: CGFloat = 20
+        flowLayout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        flowLayout.minimumInteritemSpacing = spacing
+        flowLayout.minimumLineSpacing = spacing
+        return flowLayout
     }()
     
     //MARK: View Lifecycle
@@ -55,6 +58,7 @@ class AlphabetViewController: UIViewController {
         alphabet = mockupData
         letterFullScreenImageButton.isHidden = true
         collectionView.isHidden = false
+        collectionView.collectionViewLayout = flowLayout
     }
     
     //MARK: Methods
@@ -114,10 +118,9 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension AlphabetViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = collectionView.bounds.width
             let numberOfItemsPerRow: CGFloat = 2
             let spacing: CGFloat = flowLayout.minimumInteritemSpacing
-            let availableWidth = width - spacing * (numberOfItemsPerRow)
+            let availableWidth = collectionView.bounds.width - spacing * (numberOfItemsPerRow + 1)
             let itemDimension = floor(availableWidth / numberOfItemsPerRow)
             return CGSize(width: itemDimension, height: itemDimension)
         }
