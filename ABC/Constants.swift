@@ -8,11 +8,14 @@
 import UIKit
 
 struct Constants {
-    struct Colors {
-        static let blue = UIColor(named: "Blue")
-        static let yellow = UIColor(named: "Yellow")
-        static let peach = UIColor(named: "Peach")
-        static let pink = UIColor(named: "Pink")
-        static let lightPink = UIColor(named: "Pink-1")
+    enum Colors: String, CaseIterable {
+        case blue = "Blue"
+        case peach = "Peach"
+        case pink = "Pink"
+        case lightPink = "LightPink"
+
+        static var allColors: [UIColor] {
+            return self.allCases.compactMap{ (colorCase) -> UIColor? in return UIColor(named: colorCase.rawValue) }
+        }
     }
 }

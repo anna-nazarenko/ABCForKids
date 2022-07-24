@@ -168,5 +168,4 @@ let mockupData = [
     ]),
 ]
 
-let backgroundCellColors = [Constants.Colors.pink, Constants.Colors.peach, Constants.Colors.blue, Constants.Colors.lightPink]
-
+let backgroundCellColors = Constants.Colors.allColors
