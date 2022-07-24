@@ -167,3 +167,6 @@ let mockupData = [
         Word(word: "Яхта", image: UIImage(systemName: "flame")!),
     ]),
 ]
+
+let backgroundCellColors = [Constants.Colors.pink, Constants.Colors.peach, Constants.Colors.blue, Constants.Colors.lightPink]
+

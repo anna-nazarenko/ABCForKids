@@ -91,7 +91,9 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             print("No cell")
             return UICollectionViewCell()
         }
-        cell.backgroundColor  = .lightGray
+        let randomIndex = Int.random(in: 0..<backgroundCellColors.count)
+        cell.backgroundColor  = backgroundCellColors[randomIndex]
+        cell.layer.cornerRadius = 10
         cell.letterLabel.text = alphabet[indexPath.row].letter
         return cell
     }

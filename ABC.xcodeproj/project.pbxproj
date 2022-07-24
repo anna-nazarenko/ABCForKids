@@ -49,6 +49,7 @@
 		776607122882E70400544C5B /* sound-t-ru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 776606F22882E70400544C5B /* sound-t-ru.mp3 */; };
 		776607132882E70400544C5B /* sound-zh-ru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 776606F32882E70400544C5B /* sound-zh-ru.mp3 */; };
 		776607142882E70400544C5B /* sound-s-ru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 776606F42882E70400544C5B /* sound-s-ru.mp3 */; };
+		777DE664288D3F5F001AD921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777DE663288D3F5F001AD921 /* Constants.swift */; };
 		77AC3802285752210029B5C3 /* LetterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC3801285752210029B5C3 /* LetterCard.swift */; };
 		F08C33092867026600D33A94 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C33082867026600D33A94 /* Word.swift */; };
 		F08C330B286709FB00D33A94 /* MockupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08C330A286709FB00D33A94 /* MockupData.swift */; };
@@ -99,6 +100,7 @@
 		776606F22882E70400544C5B /* sound-t-ru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-t-ru.mp3"; sourceTree = "<group>"; };
 		776606F32882E70400544C5B /* sound-zh-ru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-zh-ru.mp3"; sourceTree = "<group>"; };
 		776606F42882E70400544C5B /* sound-s-ru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-s-ru.mp3"; sourceTree = "<group>"; };
+		777DE663288D3F5F001AD921 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		77AC3801285752210029B5C3 /* LetterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCard.swift; sourceTree = "<group>"; };
 		F08C33082867026600D33A94 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		F08C330A286709FB00D33A94 /* MockupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupData.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				774C9E512857A19100796147 /* Cell */,
 				77BCA7EE2876F21B003AC462 /* Sounds */,
 				775C065528547F7600F1F0D4 /* Assets.xcassets */,
+				777DE663288D3F5F001AD921 /* Constants.swift */,
 				775C065728547F7600F1F0D4 /* LaunchScreen.storyboard */,
 				775C065A28547F7600F1F0D4 /* Info.plist */,
 			);
@@ -353,6 +356,7 @@
 				775C065128547F7400F1F0D4 /* AlphabetViewController.swift in Sources */,
 				775C064D28547F7400F1F0D4 /* AppDelegate.swift in Sources */,
 				775C064F28547F7400F1F0D4 /* SceneDelegate.swift in Sources */,
+				777DE664288D3F5F001AD921 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
