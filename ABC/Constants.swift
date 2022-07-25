@@ -15,7 +15,7 @@ struct Constants {
         case lightPink = "LightPink"
 
         static var allColors: [UIColor] {
-            return self.allCases.compactMap{ (colorCase) -> UIColor? in return UIColor(named: colorCase.rawValue) }
+            return self.allCases.compactMap { (colorCase) -> UIColor? in return UIColor(named: colorCase.rawValue) }
         }
     }
 }
