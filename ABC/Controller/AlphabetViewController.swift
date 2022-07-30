@@ -52,7 +52,7 @@ class AlphabetViewController: UIViewController {
     }()
     
     let backgroundVideoPlayer: LoopedVideoPlayer = {
-        let path = Bundle.main.path(forResource: "background_2", ofType: ".mp4")!
+        let path = Bundle.main.path(forResource: "background", ofType: ".mp4")!
         let backgroundVideoPlayer = LoopedVideoPlayer()
         backgroundVideoPlayer.prepareVideo(path)
         return backgroundVideoPlayer
@@ -66,13 +66,13 @@ class AlphabetViewController: UIViewController {
         letterFullScreenImageButton.isHidden = true
         collectionView.isHidden = false
         collectionView.collectionViewLayout = flowLayout
+        backgroundVideoPlayer.playVideo()
         
         if let backgroundCollectionView = collectionView.backgroundView,
            let backgroundVideoPlayerLayer = backgroundVideoPlayer.playerLayer {
             backgroundVideoPlayerLayer.frame = backgroundCollectionView.bounds
             backgroundCollectionView.layer.addSublayer(backgroundVideoPlayerLayer)
         }
-        
     }
     
     //MARK: Methods

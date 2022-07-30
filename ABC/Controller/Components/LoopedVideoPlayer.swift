@@ -17,9 +17,12 @@ class LoopedVideoPlayer: AVPlayer {
         queuePlayer = AVQueuePlayer(playerItem: playerItem)
         playerLayer = AVPlayerLayer(player: queuePlayer)
         playerLooper = AVPlayerLooper(player: queuePlayer!, templateItem: playerItem)
-        queuePlayer?.play()
         
         playerLayer!.videoGravity = .resizeAspectFill
+    }
+    
+    func playVideo() {
+        queuePlayer?.play()
     }
     
     override init() {
