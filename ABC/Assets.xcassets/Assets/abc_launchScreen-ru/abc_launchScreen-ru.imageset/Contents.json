@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "abc_launchScreen-ru.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "abc_launchScreen-ru@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "abc_launchScreen-ru@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
