@@ -19,10 +19,17 @@ class AlphabetViewController: UIViewController {
             collectionView.register(UINib(nibName: LetterCollectionViewCell.letterCellNibName, bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
             collectionView.delegate = self
             collectionView.dataSource = self
+            collectionView.isHidden = false
+            collectionView.collectionViewLayout = flowLayout
+            collectionView.backgroundColor = .clear
         }
     }
 
-    @IBOutlet weak var letterFullScreenImageButton: UIButton!
+    @IBOutlet weak var letterFullScreenImageButton: UIButton! {
+        didSet {
+            letterFullScreenImageButton.isHidden = true
+        }
+    }
 
     @IBAction func touchLetterFullScreenImage(_ sender: UIButton) {
         let numberOfWords = mockupData[currentLetterIndex].words.count - 1
@@ -51,10 +58,11 @@ class AlphabetViewController: UIViewController {
         return flowLayout
     }()
     
-    let backgroundVideoPlayer: LoopedVideoPlayer = {
+    let backgroundVideoPlayer: LoopedVideoPlayerView = {
         let path = Bundle.main.path(forResource: "background", ofType: ".mp4")!
-        let backgroundVideoPlayer = LoopedVideoPlayer()
-        backgroundVideoPlayer.prepareVideo(path)
+        let backgroundVideoPlayer = LoopedVideoPlayerView()
+        backgroundVideoPlayer.prepareVideo(URL(fileURLWithPath: path))
+        backgroundVideoPlayer.playVideo()
         return backgroundVideoPlayer
     }()
     
@@ -63,16 +71,12 @@ class AlphabetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alphabet = mockupData
-        letterFullScreenImageButton.isHidden = true
-        collectionView.isHidden = false
-        collectionView.collectionViewLayout = flowLayout
-        backgroundVideoPlayer.playVideo()
         
-        if let backgroundCollectionView = collectionView.backgroundView,
-           let backgroundVideoPlayerLayer = backgroundVideoPlayer.playerLayer {
-            backgroundVideoPlayerLayer.frame = backgroundCollectionView.bounds
-            backgroundCollectionView.layer.addSublayer(backgroundVideoPlayerLayer)
-        }
+        backgroundVideoPlayer.frame = view.bounds
+        view.insertSubview(backgroundVideoPlayer, at: 0)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     //MARK: Methods
@@ -92,6 +96,16 @@ class AlphabetViewController: UIViewController {
     func tapCount(numberOfWords: Int) -> Int {
         tapCounter += 1
         return tapCounter
+    }
+    
+    //MARK: Notification Center Methods
+    
+    @objc private func appMovedToBackground() {
+        backgroundVideoPlayer.pauseVideo()
+    }
+    
+    @objc private func appDidBecomeActive() {
+        backgroundVideoPlayer.playVideo()
     }
     
 }
