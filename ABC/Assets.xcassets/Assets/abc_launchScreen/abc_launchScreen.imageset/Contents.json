@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "abc_launchScreen-ru.png",
+      "filename" : "abc_launchScreen.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "abc_launchScreen-ru@2x.png",
+      "filename" : "abc_launchScreen@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "abc_launchScreen-ru@3x.png",
+      "filename" : "abc_launchScreen@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
