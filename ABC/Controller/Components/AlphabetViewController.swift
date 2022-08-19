@@ -13,7 +13,7 @@ var audioPlayer: AVAudioPlayer?
 class AlphabetViewController: UIViewController {
     
     //MARK: Outlets
-
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(UINib(nibName: LetterCollectionViewCell.letterCellNibName, bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
@@ -25,6 +25,8 @@ class AlphabetViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var wordCardDetailsView: WordCardView!
+    
     @IBOutlet weak var letterFullScreenImageButton: UIButton! {
         didSet {
             letterFullScreenImageButton.isHidden = true
@@ -77,6 +79,9 @@ class AlphabetViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        
+        wordCardDetailsView.isHidden = true
+        wordCardDetailsView.wordLabel.text = "БАНАН"
     }
     
     //MARK: Methods
@@ -123,8 +128,13 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             print("No cell")
             return UICollectionViewCell()
         }
-        let randomIndex = Int.random(in: 0..<backgroundCellColors.count)
-        cell.backgroundColor  = backgroundCellColors[randomIndex]
+//        let randomIndex = Int.random(in: 0..<backgroundCellColors.count)
+//        cell.backgroundColor  = backgroundCellColors[randomIndex]
+        if alphabet[indexPath.row].isVowel {
+            cell.backgroundColor = UIColor(named: Constants.Colors.lightPink.rawValue)
+        } else {
+            cell.backgroundColor = UIColor(named: Constants.Colors.blue.rawValue)
+        }
         cell.layer.cornerRadius = 20
         cell.letterLabel.text = alphabet[indexPath.row].letter
         return cell
@@ -132,12 +142,19 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentLetterIndex = indexPath.row
-        letterFullScreenImageButton.isHidden = false
+        letterFullScreenImageButton.isHidden = true
+        wordCardDetailsView.isHidden = false
         collectionView.isHidden = true
         playSound(letterIndex: indexPath.row)
         for index in alphabet[indexPath.row].words.indices {
-            letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: .normal)
-            break
+            wordCardDetailsView.letterLabel.text = alphabet[indexPath.row].letter.uppercased()
+            wordCardDetailsView.wordLabel.text = alphabet[indexPath.row].words[index].word.uppercased()
+            wordCardDetailsView.wordImage.image = alphabet[indexPath.row].words[index].image
+            if alphabet[indexPath.row].isVowel {
+                wordCardDetailsView.contentView.layer.borderColor = UIColor(named: Constants.Colors.lightPink.rawValue)?.cgColor
+            } else {
+                wordCardDetailsView.contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
+            }
         }
     }
 }

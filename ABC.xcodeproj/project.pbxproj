@@ -157,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				BE7BA217288D74250077EC6F /* Components */,
-				775C065028547F7400F1F0D4 /* AlphabetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,8 +265,9 @@
 		BE7BA217288D74250077EC6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				77C622EB28A8FF1F00F859B0 /* WordCard */,
+				775C065028547F7400F1F0D4 /* AlphabetViewController.swift */,
 				BE7BA218288D74400077EC6F /* LoopedVideoPlayerView.swift */,
+				77C622EB28A8FF1F00F859B0 /* WordCard */,
 			);
 			path = Components;
 			sourceTree = "<group>";

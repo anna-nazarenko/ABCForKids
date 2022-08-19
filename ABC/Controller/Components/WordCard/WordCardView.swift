@@ -22,15 +22,22 @@ class WordCardView: UIView {
         commonInit()
     }
     
+    //MARK: Outlets
+    
+    @IBOutlet var contentView: WordCardView!
+    @IBOutlet weak var wordImage: UIImageView!
+    @IBOutlet weak var letterLabel: UILabel!
+    @IBOutlet weak var wordLabel: UILabel!
+    
     //MARK: Methods
     
     private func commonInit() {
-        let bundle = Bundle.init(for: WordCardView.self)
-        if let viewToAdd = bundle.loadNibNamed("WordCardView", owner: self),
-           let contentView = viewToAdd.first as? UIView {
-            addSubview(contentView)
-            contentView.frame = bounds
-            contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        }
+        Bundle.main.loadNibNamed("WordCardView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.layer.cornerRadius = 20
+        contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
+        contentView.layer.borderWidth = 10
     }
 }
