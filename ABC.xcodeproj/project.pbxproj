@@ -202,7 +202,6 @@
 				774C9E4F2857A12A00796147 /* Controller */,
 				774C9E502857A14900796147 /* View */,
 				774C9E4E2857A0FD00796147 /* Model */,
-				774C9E512857A19100796147 /* Cell */,
 				77BCA7EE2876F21B003AC462 /* Sounds */,
 				775C065528547F7600F1F0D4 /* Assets.xcassets */,
 				BE7BA215288D70480077EC6F /* background.mp4 */,
@@ -267,6 +266,7 @@
 			children = (
 				775C065028547F7400F1F0D4 /* AlphabetViewController.swift */,
 				BE7BA218288D74400077EC6F /* LoopedVideoPlayerView.swift */,
+				774C9E512857A19100796147 /* Cell */,
 				77C622EB28A8FF1F00F859B0 /* WordCard */,
 			);
 			path = Components;
