@@ -61,7 +61,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="134.78260869565219" y="95.758928571428569"/>
         </view>
-        <tapGestureRecognizer id="lab-uZ-ql9"/>
     </objects>
     <resources>
         <image name="apelsin" width="416" height="416"/>

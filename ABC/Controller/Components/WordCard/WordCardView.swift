@@ -37,7 +37,6 @@ class WordCardView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.layer.cornerRadius = 20
-        contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
         contentView.layer.borderWidth = 10
     }
 }

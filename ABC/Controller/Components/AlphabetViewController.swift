@@ -25,25 +25,26 @@ class AlphabetViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var wordCardDetailsView: WordCardView!
-    
-    @IBOutlet weak var letterFullScreenImageButton: UIButton! {
+    @IBOutlet weak var wordCardView: WordCardView! {
         didSet {
-            letterFullScreenImageButton.isHidden = true
+            wordCardView.isHidden = true
         }
     }
-
-    @IBAction func touchLetterFullScreenImage(_ sender: UIButton) {
+    
+    @IBAction func didTapWordCardView(_ sender: UITapGestureRecognizer) {
         let numberOfWords = mockupData[currentLetterIndex].words.count - 1
         let wordIndex = tapCount(numberOfWords: numberOfWords)
         if wordIndex <= numberOfWords {
-            letterFullScreenImageButton.setImage(alphabet[currentLetterIndex].words[wordIndex].image, for: .normal)
+            wordCardView.wordImage.image = alphabet[currentLetterIndex].words[wordIndex].image
+            wordCardView.wordLabel.text = alphabet[currentLetterIndex].words[wordIndex].word.uppercased()
+            wordCardView.letterLabel.text = alphabet[currentLetterIndex].letter.uppercased()
         } else {
-            letterFullScreenImageButton.isHidden = true
+            wordCardView.isHidden = true
             collectionView.isHidden = false
             tapCounter = 0
         }
     }
+    
     
     //MARK: Properties
     
@@ -79,9 +80,6 @@ class AlphabetViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-        
-        wordCardDetailsView.isHidden = true
-        wordCardDetailsView.wordLabel.text = "БАНАН"
     }
     
     //MARK: Methods
@@ -128,8 +126,6 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             print("No cell")
             return UICollectionViewCell()
         }
-//        let randomIndex = Int.random(in: 0..<backgroundCellColors.count)
-//        cell.backgroundColor  = backgroundCellColors[randomIndex]
         if alphabet[indexPath.row].isVowel {
             cell.backgroundColor = UIColor(named: Constants.Colors.lightPink.rawValue)
         } else {
@@ -142,19 +138,19 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentLetterIndex = indexPath.row
-        letterFullScreenImageButton.isHidden = true
-        wordCardDetailsView.isHidden = false
+        wordCardView.isHidden = false
         collectionView.isHidden = true
         playSound(letterIndex: indexPath.row)
         for index in alphabet[indexPath.row].words.indices {
-            wordCardDetailsView.letterLabel.text = alphabet[indexPath.row].letter.uppercased()
-            wordCardDetailsView.wordLabel.text = alphabet[indexPath.row].words[index].word.uppercased()
-            wordCardDetailsView.wordImage.image = alphabet[indexPath.row].words[index].image
+            wordCardView.letterLabel.text = alphabet[indexPath.row].letter.uppercased()
+            wordCardView.wordLabel.text = alphabet[indexPath.row].words[index].word.uppercased()
+            wordCardView.wordImage.image = alphabet[indexPath.row].words[index].image
             if alphabet[indexPath.row].isVowel {
-                wordCardDetailsView.contentView.layer.borderColor = UIColor(named: Constants.Colors.lightPink.rawValue)?.cgColor
+                wordCardView.contentView.layer.borderColor = UIColor(named: Constants.Colors.lightPink.rawValue)?.cgColor
             } else {
-                wordCardDetailsView.contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
+                wordCardView.contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
             }
+            break
         }
     }
 }

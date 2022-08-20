@@ -10,7 +10,9 @@ import UIKit
 
 let mockupData = [
     LetterCard(identifier: 0, letter: "A", words: [
-        Word(word: "Апельсин", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru")
+        Word(word: "Апельсин", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru"),
+        Word(word: "Ананас", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru"),
+        Word(word: "Анюта", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru")
     ]),
     LetterCard(identifier: 1, letter: "Б", isVowel: false, words: [
         Word(word: "Бабочка", image: UIImage(named: "letter-b-ru")!, sound: "sound-b-ru")

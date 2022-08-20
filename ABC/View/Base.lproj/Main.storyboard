@@ -19,18 +19,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNp-K7-mZr" userLabel="Word Card Details View" customClass="WordCardView" customModule="ABC" customModuleProvider="target">
                                 <rect key="frame" x="20" y="181" width="374" height="374"/>
                                 <color key="tintColor" systemColor="tintColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lNp-K7-mZr" secondAttribute="height" multiplier="1:1" id="Tfx-73-T5r"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-Ds-LkZ">
-                                <rect key="frame" x="15" y="10" width="384" height="716"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <action selector="touchLetterFullScreenImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPl-Ib-bKC"/>
+                                    <outletCollection property="gestureRecognizers" destination="xcH-bM-aZz" appends="YES" id="tX0-Eu-RCL"/>
                                 </connections>
-                            </button>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oRe-tA-ZsB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,27 +42,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-15" id="2Se-ZV-VhY"/>
                             <constraint firstItem="lNp-K7-mZr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4nE-Ca-eMK"/>
                             <constraint firstAttribute="bottom" secondItem="oRe-tA-ZsB" secondAttribute="bottom" id="9le-5t-uq2"/>
                             <constraint firstItem="lNp-K7-mZr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BQM-l5-Yam"/>
                             <constraint firstAttribute="trailing" secondItem="oRe-tA-ZsB" secondAttribute="trailing" id="Jh7-NF-C8Q"/>
                             <constraint firstItem="oRe-tA-ZsB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KmX-sA-VLh"/>
                             <constraint firstItem="lNp-K7-mZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SJV-ml-oaT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BBa-Ds-LkZ" secondAttribute="bottom" constant="10" id="UmB-yV-cmi"/>
-                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cao-oC-Czc"/>
-                            <constraint firstItem="BBa-Ds-LkZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ixo-NL-6O5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNp-K7-mZr" secondAttribute="trailing" constant="20" id="tz5-gi-rYg"/>
                             <constraint firstItem="oRe-tA-ZsB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w6n-0B-hfg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="oRe-tA-ZsB" id="x7g-dG-a7C"/>
-                        <outlet property="letterFullScreenImageButton" destination="BBa-Ds-LkZ" id="mvr-15-4rf"/>
-                        <outlet property="wordCardDetailsView" destination="lNp-K7-mZr" id="fkT-Yz-BM5"/>
+                        <outlet property="wordCardView" destination="lNp-K7-mZr" id="fkT-Yz-BM5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xcH-bM-aZz">
+                    <connections>
+                        <action selector="didTapWordCardView:" destination="BYZ-38-t0r" id="6KX-cF-9Ii"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-71.014492753623188" y="55.580357142857139"/>
         </scene>
