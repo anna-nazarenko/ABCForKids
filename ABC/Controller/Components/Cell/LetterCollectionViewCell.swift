@@ -28,9 +28,9 @@ class LetterCollectionViewCell: UICollectionViewCell {
     
     func setBackgroundColor(for isVowel: Bool) {
         if isVowel {
-            backgroundColor = UIColor(named: Constants.Colors.lightPink.rawValue)
+            backgroundColor = Constants.Colors.lightPink
         } else {
-            backgroundColor = UIColor(named: Constants.Colors.blue.rawValue)
+            backgroundColor = Constants.Colors.blue
         }
     }
 }

@@ -42,9 +42,9 @@ class WordCardView: UIView {
     
     func setBorderColor(for isVowel: Bool) {
         if isVowel {
-            contentView.layer.borderColor = UIColor(named: Constants.Colors.lightPink.rawValue)?.cgColor
+            contentView.layer.borderColor = Constants.Colors.lightPink?.cgColor
         } else {
-            contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
+            contentView.layer.borderColor = Constants.Colors.blue?.cgColor
         }
     }
 }

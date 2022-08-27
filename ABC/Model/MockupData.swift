@@ -108,5 +108,3 @@ let mockupData = [
         Word(word: "Яблоко", image: UIImage(named: "letter-ja-ru")!, sound: "sound-ja-ru")
     ]),
 ]
-
-let backgroundCellColors = Constants.Colors.allColors
