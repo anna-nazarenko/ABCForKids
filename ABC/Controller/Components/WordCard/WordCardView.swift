@@ -39,4 +39,12 @@ class WordCardView: UIView {
         contentView.layer.cornerRadius = 20
         contentView.layer.borderWidth = 10
     }
+    
+    func setBorderColor(for isVowel: Bool) {
+        if isVowel {
+            contentView.layer.borderColor = UIColor(named: Constants.Colors.lightPink.rawValue)?.cgColor
+        } else {
+            contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
+        }
+    }
 }

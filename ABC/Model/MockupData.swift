@@ -10,21 +10,18 @@ import UIKit
 
 let mockupData = [
     LetterCard(identifier: 0, letter: "A", words: [
-        Word(word: "Апельсин", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru"),
-        Word(word: "Ананас", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru"),
-        Word(word: "Анюта", image: UIImage(named: "letter-a-ru")!, sound: "sound-a-ru")
-    ]),
+        Word(word: "Апельсин", image: UIImage(named: "orange")!, sound: "sound-a-ru")]),
     LetterCard(identifier: 1, letter: "Б", isVowel: false, words: [
-        Word(word: "Бабочка", image: UIImage(named: "letter-b-ru")!, sound: "sound-b-ru")
+        Word(word: "Бабочка", image: UIImage(named: "butterfly")!, sound: "sound-b-ru")
     ]),
     LetterCard(identifier: 2, letter: "В", isVowel: false, words: [
-        Word(word: "Волк", image: UIImage(named: "letter-v-ru")!, sound: "sound-v-ru")
+        Word(word: "Волк", image: UIImage(named: "wolf")!, sound: "sound-v-ru")
     ]),
     LetterCard(identifier: 3, letter: "Г", isVowel: false, words: [
-        Word(word: "Гриб", image: UIImage(named: "letter-g-ru")!, sound: "sound-g-ru")
+        Word(word: "Гриб", image: UIImage(named: "mushroom")!, sound: "sound-g-ru")
     ]),
     LetterCard(identifier: 4, letter: "Д", isVowel: false, words: [
-        Word(word: "Дерево", image: UIImage(named: "letter-d-ru")!, sound: "sound-d-ru")
+        Word(word: "Дерево", image: UIImage(named: "tree")!, sound: "sound-d-ru")
     ]),
     LetterCard(identifier: 5, letter: "Е", words: [
         Word(word: "Ежевика", image: UIImage(named: "letter-e-ru")!, sound: "sound-e-ru")
