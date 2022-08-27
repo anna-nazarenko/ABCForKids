@@ -17,7 +17,6 @@ class AlphabetViewController: UIViewController {
             collectionView.register(UINib(nibName: LetterCollectionViewCell.letterCellNibName, bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
             collectionView.delegate = self
             collectionView.dataSource = self
-            collectionView.isHidden = false
             collectionView.collectionViewLayout = flowLayout
             collectionView.backgroundColor = .clear
         }
@@ -30,10 +29,8 @@ class AlphabetViewController: UIViewController {
     }
     
     @IBAction func didTapWordCardView(_ sender: UITapGestureRecognizer) {
-        wordCardView.isHidden = true
-        collectionView.isHidden = false
+        showLetterCardsCollectionView()
     }
-    
     
     //MARK: Properties
     
@@ -71,6 +68,16 @@ class AlphabetViewController: UIViewController {
     
     //MARK: Methods
     
+    func showWordCardView() {
+        wordCardView.isHidden = false
+        collectionView.isHidden = true
+    }
+    
+    func showLetterCardsCollectionView() {
+        collectionView.isHidden = false
+        wordCardView.isHidden = true
+    }
+    
     //MARK: Notification Center Methods
     
     @objc private func appMovedToBackground() {
@@ -102,8 +109,7 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        wordCardView.isHidden = false
-        collectionView.isHidden = true
+        showWordCardView()
         wordCardView.setBorderColor(for: alphabet[indexPath.row].isVowel)
         let words = mockupData[indexPath.row].words
         if let randomWord = words.randomElement() {
