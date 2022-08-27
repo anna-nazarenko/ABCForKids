@@ -22,8 +22,15 @@ class LetterCollectionViewCell: UICollectionViewCell {
         layer.shadowRadius = 5
         layer.shadowOffset = CGSize(width: 0, height: 0)
         layer.shadowColor = UIColor.black.cgColor
-
+        layer.cornerRadius = 20
         contentView.layer.cornerRadius = 8
     }
     
+    func setBackgroundColor(for isVowel: Bool) {
+        if isVowel {
+            backgroundColor = UIColor(named: Constants.Colors.lightPink.rawValue)
+        } else {
+            backgroundColor = UIColor(named: Constants.Colors.blue.rawValue)
+        }
+    }
 }

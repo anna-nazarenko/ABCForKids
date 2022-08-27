@@ -11,5 +11,6 @@ struct LetterCard {
     
     let identifier: Int
     var letter: String
+    var isVowel: Bool = true
     var words: [Word]
 }

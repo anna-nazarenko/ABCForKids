@@ -12,8 +12,8 @@ var audioPlayer: AVAudioPlayer?
 
 class AlphabetViewController: UIViewController {
     
-    //MARK: Outlets
-
+    //MARK: IBOutlets and IBActions
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(UINib(nibName: LetterCollectionViewCell.letterCellNibName, bundle: nil), forCellWithReuseIdentifier: LetterCollectionViewCell.identifier)
@@ -25,29 +25,21 @@ class AlphabetViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var letterFullScreenImageButton: UIButton! {
+    @IBOutlet weak var wordCardView: WordCardView! {
         didSet {
-            letterFullScreenImageButton.isHidden = true
+            wordCardView.isHidden = true
         }
     }
-
-    @IBAction func touchLetterFullScreenImage(_ sender: UIButton) {
-        let numberOfWords = mockupData[currentLetterIndex].words.count - 1
-        let wordIndex = tapCount(numberOfWords: numberOfWords)
-        if wordIndex <= numberOfWords {
-            letterFullScreenImageButton.setImage(alphabet[currentLetterIndex].words[wordIndex].image, for: .normal)
-        } else {
-            letterFullScreenImageButton.isHidden = true
-            collectionView.isHidden = false
-            tapCounter = 0
-        }
+    
+    @IBAction func didTapWordCardView(_ sender: UITapGestureRecognizer) {
+        wordCardView.isHidden = true
+        collectionView.isHidden = false
     }
+    
     
     //MARK: Properties
     
     var alphabet: [LetterCard] = []
-    var currentLetterIndex: Int = 0
-    var tapCounter: Int = 0
     
     let flowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -81,8 +73,8 @@ class AlphabetViewController: UIViewController {
     
     //MARK: Methods
     
-    func playSound(letterIndex: Int) {
-        let soundName = mockupData[letterIndex].words[0].sound
+    func playSound(for word: Word) {
+        let soundName = word.sound
         guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
         let url = URL(fileURLWithPath: path)
         do {
@@ -91,11 +83,6 @@ class AlphabetViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
-    }
-    
-    func tapCount(numberOfWords: Int) -> Int {
-        tapCounter += 1
-        return tapCounter
     }
     
     //MARK: Notification Center Methods
@@ -123,21 +110,21 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             print("No cell")
             return UICollectionViewCell()
         }
-        let randomIndex = Int.random(in: 0..<backgroundCellColors.count)
-        cell.backgroundColor  = backgroundCellColors[randomIndex]
-        cell.layer.cornerRadius = 20
         cell.letterLabel.text = alphabet[indexPath.row].letter
+        cell.setBackgroundColor(for: alphabet[indexPath.row].isVowel)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        currentLetterIndex = indexPath.row
-        letterFullScreenImageButton.isHidden = false
+        wordCardView.isHidden = false
         collectionView.isHidden = true
-        playSound(letterIndex: indexPath.row)
-        for index in alphabet[indexPath.row].words.indices {
-            letterFullScreenImageButton.setImage(alphabet[indexPath.row].words[index].image, for: .normal)
-            break
+        wordCardView.setBorderColor(for: alphabet[indexPath.row].isVowel)
+        let words = mockupData[indexPath.row].words
+        if let randomWord = words.randomElement() {
+            wordCardView.wordImage.image = randomWord.image
+            wordCardView.wordLabel.text = randomWord.word.uppercased()
+            wordCardView.letterLabel.text = alphabet[indexPath.row].letter.uppercased()
+            playSound(for: randomWord)
         }
     }
 }
