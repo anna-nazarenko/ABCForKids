@@ -2,7 +2,7 @@
 //  Constants.swift
 //  ABC
 //
-//  Created by Ольга on 24.07.2022.
+//  Created by Friendly Family Studio on 24.07.2022.
 //
 
 import UIKit

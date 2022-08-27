@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ABC
 //
-//  Created by Ольга on 11.06.2022.
+//  Created by Friendly Family Studio on 11.06.2022.
 //
 
 import UIKit
