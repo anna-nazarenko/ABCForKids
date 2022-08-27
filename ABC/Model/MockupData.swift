@@ -18,52 +18,52 @@ let mockupData = [
         Word(word: "Волк", image: UIImage(named: "wolf")!, sound: "sound-v-ru")
     ]),
     LetterCard(identifier: 3, letter: "Г", isVowel: false, words: [
-        Word(word: "Гриб", image: UIImage(named: "mushroom")!, sound: "sound-g-ru")
+        Word(word: "Гриб", image: UIImage(named: "muhomor")!, sound: "sound-g-ru")
     ]),
     LetterCard(identifier: 4, letter: "Д", isVowel: false, words: [
         Word(word: "Дерево", image: UIImage(named: "tree")!, sound: "sound-d-ru")
     ]),
     LetterCard(identifier: 5, letter: "Е", words: [
-        Word(word: "Ежевика", image: UIImage(named: "letter-e-ru")!, sound: "sound-e-ru")
+        Word(word: "Ежевика", image: UIImage(named: "dewberry")!, sound: "sound-e-ru")
     ]),
     LetterCard(identifier: 6, letter: "Ё", words: [
-        Word(word: "Ёлка", image: UIImage(named: "letter-jo-ru")!, sound: "sound-jo-ru")
+        Word(word: "Ёлка", image: UIImage(named: "christmas-tree")!, sound: "sound-jo-ru")
     ]),
     LetterCard(identifier: 7, letter: "Ж", isVowel: false, words: [
-        Word(word: "Жираф", image: UIImage(named: "letter-zh-ru")!, sound: "sound-zh-ru")
+        Word(word: "Жираф", image: UIImage(named: "giraffe")!, sound: "sound-zh-ru")
     ]),
     LetterCard(identifier: 9, letter: "З", isVowel: false, words: [
-        Word(word: "Зебра", image: UIImage(named: "letter-z-ru")!, sound: "sound-z-ru")
+        Word(word: "Зебра", image: UIImage(named: "zebra")!, sound: "sound-z-ru")
     ]),
     LetterCard(identifier: 10, letter: "И", words: [
-        Word(word: "Игла", image: UIImage(named: "letter-i-ru")!, sound: "sound-i-ru")
+        Word(word: "Игла", image: UIImage(named: "needle")!, sound: "sound-i-ru")
     ]),
     LetterCard(identifier: 11, letter: "Й", isVowel: false, words: [
-        Word(word: "Йогурт", image: UIImage(named: "letter-j-ru")!, sound: "sound-j-ru")
+        Word(word: "Йогурт", image: UIImage(named: "yogurt")!, sound: "sound-j-ru")
     ]),
     LetterCard(identifier: 12, letter: "К", isVowel: false, words: [
-        Word(word: "Колесо", image: UIImage(named: "letter-k-ru")!, sound: "sound-k-ru")
+        Word(word: "Колесо", image: UIImage(named: "wheel")!, sound: "sound-k-ru")
     ]),
     LetterCard(identifier: 13, letter: "Л", isVowel: false, words: [
-        Word(word: "Лимон", image: UIImage(named: "letter-l-ru")!, sound: "sound-l-ru")
+        Word(word: "Лимон", image: UIImage(named: "lemon")!, sound: "sound-l-ru")
     ]),
     LetterCard(identifier: 14, letter: "М", isVowel: false, words: [
-        Word(word: "Медведь", image: UIImage(named: "letter-m-ru")!, sound: "sound-m-ru")
+        Word(word: "Медведь", image: UIImage(named: "bear")!, sound: "sound-m-ru")
     ]),
     LetterCard(identifier: 15, letter: "Н", isVowel: false, words: [
-        Word(word: "Ножницы", image: UIImage(named: "letter-n-ru")!, sound: "sound-n-ru")
+        Word(word: "Ножницы", image: UIImage(named: "scissors")!, sound: "sound-n-ru")
     ]),
     LetterCard(identifier: 16, letter: "О", words: [
-        Word(word: "Обезьяна", image: UIImage(named: "letter-o-ru")!, sound: "sound-o-ru")
+        Word(word: "Обезьяна", image: UIImage(named: "monkey")!, sound: "sound-o-ru")
     ]),
     LetterCard(identifier: 17, letter: "П", isVowel: false, words: [
-        Word(word: "Петух", image: UIImage(named: "letter-p-ru")!, sound: "sound-p-ru")
+        Word(word: "Петух", image: UIImage(named: "rooster")!, sound: "sound-p-ru")
     ]),
     LetterCard(identifier: 18, letter: "Р", isVowel: false, words: [
-        Word(word: "Рыба", image: UIImage(named: "letter-r-ru")!, sound: "sound-r-ru")
+        Word(word: "Рыба", image: UIImage(named: "goldfish")!, sound: "sound-r-ru")
     ]),
     LetterCard(identifier: 19, letter: "С", isVowel: false, words: [
-        Word(word: "Солнце", image: UIImage(named: "letter-s-ru")!, sound: "sound-s-ru")
+        Word(word: "Солнце", image: UIImage(named: "sun")!, sound: "sound-s-ru")
     ]),
     LetterCard(identifier: 20, letter: "Т", isVowel: false, words: [
         Word(word: "Тигр", image: UIImage(named: "letter-t-ru")!, sound: "sound-t-ru")

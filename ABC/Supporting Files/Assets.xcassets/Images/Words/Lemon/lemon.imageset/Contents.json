@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "wolf.jpg",
+      "filename" : "lemon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "wolf@2x.jpg",
+      "filename" : "lemon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "wolf@3x.jpg",
+      "filename" : "lemon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

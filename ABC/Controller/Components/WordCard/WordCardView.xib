@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АПЕЛЬСИН" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="dJw-sQ-rrT" userLabel="Word Label">
-                    <rect key="frame" x="20" y="313" width="360" height="67"/>
+                    <rect key="frame" x="20" y="310" width="360" height="70"/>
                     <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="55"/>
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -34,8 +34,8 @@
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" insetsLayoutMarginsFromSafeArea="NO" image="letter-a-ru" translatesAutoresizingMaskIntoConstraints="NO" id="5nl-nh-8XX" userLabel="Word Image">
-                    <rect key="frame" x="17" y="40" width="253" height="253"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" insetsLayoutMarginsFromSafeArea="NO" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="5nl-nh-8XX" userLabel="Word Image">
+                    <rect key="frame" x="20" y="40" width="250" height="250"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5nl-nh-8XX" secondAttribute="height" multiplier="1:1" id="Mt3-u7-sf5"/>
                     </constraints>
@@ -60,6 +60,6 @@
         </view>
     </objects>
     <resources>
-        <image name="letter-a-ru" width="400" height="330"/>
+        <image name="orange" width="150" height="150"/>
     </resources>
 </document>

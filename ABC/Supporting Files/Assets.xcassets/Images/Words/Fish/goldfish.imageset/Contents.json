@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "wolf.jpg",
+      "filename" : "goldfish.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "wolf@2x.jpg",
+      "filename" : "goldfish@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "wolf@3x.jpg",
+      "filename" : "goldfish@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
