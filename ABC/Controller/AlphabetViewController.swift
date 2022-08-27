@@ -8,8 +8,6 @@
 import UIKit
 import AVFoundation
 
-var audioPlayer: AVAudioPlayer?
-
 class AlphabetViewController: UIViewController {
     
     //MARK: IBOutlets and IBActions
@@ -73,18 +71,6 @@ class AlphabetViewController: UIViewController {
     
     //MARK: Methods
     
-    func playSound(for word: Word) {
-        let soundName = word.sound
-        guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
-        let url = URL(fileURLWithPath: path)
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer!.play()
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
     //MARK: Notification Center Methods
     
     @objc private func appMovedToBackground() {
@@ -124,7 +110,7 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             wordCardView.wordImage.image = randomWord.image
             wordCardView.wordLabel.text = randomWord.word.uppercased()
             wordCardView.letterLabel.text = alphabet[indexPath.row].letter.uppercased()
-            playSound(for: randomWord)
+            AudioPlayer.playWordSound(for: randomWord)
         }
     }
 }
