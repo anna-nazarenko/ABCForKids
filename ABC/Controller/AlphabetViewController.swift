@@ -35,6 +35,7 @@ class AlphabetViewController: UIViewController {
     //MARK: Properties
     
     var alphabet: [LetterCard] = []
+    let audioPlayer = AudioPlayer()
     
     let flowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -116,7 +117,7 @@ extension AlphabetViewController: UICollectionViewDelegate, UICollectionViewData
             wordCardView.wordImage.image = randomWord.image
             wordCardView.wordLabel.text = randomWord.word.uppercased()
             wordCardView.letterLabel.text = alphabet[indexPath.row].letter.uppercased()
-            AudioPlayer.playWordSound(for: randomWord)
+            audioPlayer.playWordSound(for: randomWord)
         }
     }
 }

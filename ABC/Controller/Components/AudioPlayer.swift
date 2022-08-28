@@ -2,26 +2,26 @@
 //  AudioPlayer.swift
 //  ABC
 //
-//  Created by Ольга on 27.08.2022.
+//  Created by Friendly Family Studio on 27.08.2022.
 //
 
 import AVFoundation
 
-class AudioPlayer: AVAudioPlayer {
+class AudioPlayer {
     
     //MARK: Properties
     
-    static var audioPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
     
     //MARK: Methods
     
-    static func playWordSound(for word: Word) {
+    func playWordSound(for word: Word) {
         let soundName = word.sound
         guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
         let url = URL(fileURLWithPath: path)
             do {
-                self.audioPlayer = try AVAudioPlayer(contentsOf: url)
-                self.audioPlayer.play()
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
             } catch let error {
                 print(error.localizedDescription)
             }
