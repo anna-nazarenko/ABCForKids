@@ -66,45 +66,45 @@ let mockupData = [
         Word(word: "Солнце", image: UIImage(named: "sun")!, sound: "sound-s-ru")
     ]),
     LetterCard(identifier: 20, letter: "Т", isVowel: false, words: [
-        Word(word: "Тигр", image: UIImage(named: "letter-t-ru")!, sound: "sound-t-ru")
+        Word(word: "Тигр", image: UIImage(named: "tiger")!, sound: "sound-t-ru")
     ]),
     LetterCard(identifier: 21, letter: "У", words: [
-        Word(word: "Утка", image: UIImage(named: "letter-u-ru")!, sound: "sound-u-ru")
+        Word(word: "Утка", image: UIImage(named: "duck")!, sound: "sound-u-ru")
     ]),
     LetterCard(identifier: 22, letter: "Ф", isVowel: false, words: [
-        Word(word: "Фея", image: UIImage(named: "letter-f-ru")!, sound: "sound-f-ru")
+        Word(word: "Фея", image: UIImage(named: "fairy")!, sound: "sound-f-ru")
     ]),
     LetterCard(identifier: 23, letter: "Х", isVowel: false, words: [
-        Word(word: "Хлеб", image: UIImage(named: "letter-h-ru")!, sound: "sound-h-ru")
+        Word(word: "Хлеб", image: UIImage(named: "bread")!, sound: "sound-h-ru")
     ]),
     LetterCard(identifier: 24, letter: "Ц", isVowel: false, words: [
-        Word(word: "Цветок", image: UIImage(named: "letter-c-ru")!, sound: "sound-c-ru")
+        Word(word: "Цветок", image: UIImage(named: "flower")!, sound: "sound-c-ru")
     ]),
     LetterCard(identifier: 25, letter: "Ч", isVowel: false, words: [
-        Word(word: "Часы", image: UIImage(named: "letter-ch-ru")!, sound: "sound-ch-ru")
+        Word(word: "Часы", image: UIImage(named: "watch")!, sound: "sound-ch-ru")
     ]),
     LetterCard(identifier: 26, letter: "Ш", isVowel: false, words: [
-        Word(word: "Шарик", image: UIImage(named: "letter-sh-ru")!, sound: "sound-sh-ru")
+        Word(word: "Шарик", image: UIImage(named: "balloon")!, sound: "sound-sh-ru")
     ]),
     LetterCard(identifier: 27, letter: "Щ", isVowel: false, words: [
-        Word(word: "Щётка", image: UIImage(named: "letter-shh-ru")!, sound: "sound-shh-ru")
+        Word(word: "Щётка", image: UIImage(named: "brush")!, sound: "sound-shh-ru")
     ]),
     LetterCard(identifier: 28, letter: "Ъ", isVowel: false, words: [
-        Word(word: "Объявление", image: UIImage(named: "letter-tverdyj-znak-ru")!, sound: "sound-tverdyj-znak-ru"),
+        Word(word: "Объятия", image: UIImage(named: "embrace")!, sound: "sound-tverdyj-znak-ru"),
     ]),
     LetterCard(identifier: 29, letter: "Ы", words: [
-        Word(word: "Сыр", image: UIImage(named: "letter-y-ru")!, sound: "sound-y-ru"),
+        Word(word: "Сыр", image: UIImage(named: "cheese")!, sound: "sound-y-ru"),
     ]),
     LetterCard(identifier: 30, letter: "Ь", isVowel: false, words: [
-        Word(word: "Мышь", image: UIImage(named: "letter-mjagkij-znak-ru")!, sound: "sound-mjagkij-znak-ru"),
+        Word(word: "Мышь", image: UIImage(named: "mouse")!, sound: "sound-mjagkij-znak-ru"),
     ]),
     LetterCard(identifier: 31, letter: "Э", words: [
-        Word(word: "Эскаватор", image: UIImage(named: "letter-je-ru")!, sound: "sound-je-ru")
+        Word(word: "Экскаватор", image: UIImage(named: "excavator")!, sound: "sound-je-ru")
     ]),
     LetterCard(identifier: 32, letter: "Ю", words: [
-        Word(word: "Юбка", image: UIImage(named: "letter-ju-ru")!, sound: "sound-ju-ru")
+        Word(word: "Юбка", image: UIImage(named: "skirt")!, sound: "sound-ju-ru")
     ]),
     LetterCard(identifier: 33, letter: "Я", words: [
-        Word(word: "Яблоко", image: UIImage(named: "letter-ja-ru")!, sound: "sound-ja-ru")
+        Word(word: "Яблоко", image: UIImage(named: "apple")!, sound: "sound-ja-ru")
     ]),
 ]

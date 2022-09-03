@@ -52,7 +52,7 @@
                 <constraint firstItem="YJs-bV-WEN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="jhq-0Y-Ccy"/>
                 <constraint firstAttribute="trailing" secondItem="YJs-bV-WEN" secondAttribute="trailing" constant="20" id="uhz-O5-7xR"/>
                 <constraint firstItem="dJw-sQ-rrT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="weG-Jm-NEO"/>
-                <constraint firstItem="5nl-nh-8XX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="wl0-gk-MhK"/>
+                <constraint firstItem="5nl-nh-8XX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="zWx-KN-ORd"/>
             </constraints>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
