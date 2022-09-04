@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class WordCardView: UIView {
     
     //MARK: Initialization

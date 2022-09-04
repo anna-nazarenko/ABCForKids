@@ -5,12 +5,12 @@
 //  Created by Friendly Family Studio on 25.06.2022.
 //
 
-import Foundation
 import UIKit
 
 let mockupData = [
     LetterCard(identifier: 0, letter: "A", words: [
-        Word(word: "Апельсин", image: UIImage(named: "orange")!, sound: "sound-a-ru")]),
+        Word(word: "Апельсин", image: UIImage(named: "orange")!, sound: "sound-a-ru")
+    ]),
     LetterCard(identifier: 1, letter: "Б", isVowel: false, words: [
         Word(word: "Бабочка", image: UIImage(named: "butterfly")!, sound: "sound-b-ru")
     ]),
