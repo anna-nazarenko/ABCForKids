@@ -2,11 +2,10 @@
 //  WordCardView.swift
 //  ABC
 //
-//  Created by Ольга on 14.08.2022.
+//  Created by Friendly Family Studio on 14.08.2022.
 //
 
 import UIKit
-
 
 class WordCardView: UIView {
     
@@ -42,9 +41,9 @@ class WordCardView: UIView {
     
     func setBorderColor(for isVowel: Bool) {
         if isVowel {
-            contentView.layer.borderColor = UIColor(named: Constants.Colors.lightPink.rawValue)?.cgColor
+            contentView.layer.borderColor = Constants.Colors.lightPink?.cgColor
         } else {
-            contentView.layer.borderColor = UIColor(named: Constants.Colors.blue.rawValue)?.cgColor
+            contentView.layer.borderColor = Constants.Colors.blue?.cgColor
         }
     }
 }

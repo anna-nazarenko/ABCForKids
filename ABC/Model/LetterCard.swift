@@ -2,13 +2,12 @@
 //  LetterCard.swift
 //  ABC
 //
-//  Created by Ольга on 13.06.2022.
+//  Created by Friendly Family Studio on 13.06.2022.
 //
 
 import Foundation
 
 struct LetterCard {
-    
     let identifier: Int
     var letter: String
     var isVowel: Bool = true

@@ -51,6 +51,7 @@
 		776607142882E70400544C5B /* sound-s-ru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 776606F42882E70400544C5B /* sound-s-ru.mp3 */; };
 		777DE664288D3F5F001AD921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777DE663288D3F5F001AD921 /* Constants.swift */; };
 		77AC3802285752210029B5C3 /* LetterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC3801285752210029B5C3 /* LetterCard.swift */; };
+		77BABA1E28BA2F9000C753CB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BABA1D28BA2F9000C753CB /* AudioPlayer.swift */; };
 		77C622ED28A8FF5500F859B0 /* WordCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C622EC28A8FF5500F859B0 /* WordCardView.xib */; };
 		77C622EF28A8FFD100F859B0 /* WordCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C622EE28A8FFD100F859B0 /* WordCardView.swift */; };
 		BE7BA216288D70480077EC6F /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BE7BA215288D70480077EC6F /* background.mp4 */; };
@@ -106,6 +107,7 @@
 		776606F42882E70400544C5B /* sound-s-ru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-s-ru.mp3"; sourceTree = "<group>"; };
 		777DE663288D3F5F001AD921 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		77AC3801285752210029B5C3 /* LetterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCard.swift; sourceTree = "<group>"; };
+		77BABA1D28BA2F9000C753CB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		77C622EC28A8FF5500F859B0 /* WordCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCardView.xib; sourceTree = "<group>"; };
 		77C622EE28A8FFD100F859B0 /* WordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardView.swift; sourceTree = "<group>"; };
 		BE7BA215288D70480077EC6F /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		774C9E4F2857A12A00796147 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				775C065028547F7400F1F0D4 /* AlphabetViewController.swift */,
 				BE7BA217288D74250077EC6F /* Components */,
 			);
 			path = Controller;
@@ -202,14 +205,22 @@
 				774C9E4F2857A12A00796147 /* Controller */,
 				774C9E502857A14900796147 /* View */,
 				774C9E4E2857A0FD00796147 /* Model */,
-				77BCA7EE2876F21B003AC462 /* Sounds */,
-				775C065528547F7600F1F0D4 /* Assets.xcassets */,
-				BE7BA215288D70480077EC6F /* background.mp4 */,
-				777DE663288D3F5F001AD921 /* Constants.swift */,
+				77BABA1C28BA2B1D00C753CB /* Supporting Files */,
 				775C065728547F7600F1F0D4 /* LaunchScreen.storyboard */,
 				775C065A28547F7600F1F0D4 /* Info.plist */,
 			);
 			path = ABC;
+			sourceTree = "<group>";
+		};
+		77BABA1C28BA2B1D00C753CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77BCA7EE2876F21B003AC462 /* Sounds */,
+				775C065528547F7600F1F0D4 /* Assets.xcassets */,
+				BE7BA215288D70480077EC6F /* background.mp4 */,
+				777DE663288D3F5F001AD921 /* Constants.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		77BCA7EE2876F21B003AC462 /* Sounds */ = {
@@ -264,7 +275,7 @@
 		BE7BA217288D74250077EC6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				775C065028547F7400F1F0D4 /* AlphabetViewController.swift */,
+				77BABA1D28BA2F9000C753CB /* AudioPlayer.swift */,
 				BE7BA218288D74400077EC6F /* LoopedVideoPlayerView.swift */,
 				774C9E512857A19100796147 /* Cell */,
 				77C622EB28A8FF1F00F859B0 /* WordCard */,
@@ -381,6 +392,7 @@
 			files = (
 				F08C330B286709FB00D33A94 /* MockupData.swift in Sources */,
 				775C06622854899F00F1F0D4 /* LetterCollectionViewCell.swift in Sources */,
+				77BABA1E28BA2F9000C753CB /* AudioPlayer.swift in Sources */,
 				F08C33092867026600D33A94 /* Word.swift in Sources */,
 				77AC3802285752210029B5C3 /* LetterCard.swift in Sources */,
 				77C622EF28A8FFD100F859B0 /* WordCardView.swift in Sources */,

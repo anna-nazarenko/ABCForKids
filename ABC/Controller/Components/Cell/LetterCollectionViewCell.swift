@@ -2,7 +2,7 @@
 //  LetterCollectionViewCell.swift
 //  ABC
 //
-//  Created by Ольга on 11.06.2022.
+//  Created by Friendly Family Studio on 11.06.2022.
 //
 
 import UIKit
@@ -28,9 +28,9 @@ class LetterCollectionViewCell: UICollectionViewCell {
     
     func setBackgroundColor(for isVowel: Bool) {
         if isVowel {
-            backgroundColor = UIColor(named: Constants.Colors.lightPink.rawValue)
+            backgroundColor = Constants.Colors.lightPink
         } else {
-            backgroundColor = UIColor(named: Constants.Colors.blue.rawValue)
+            backgroundColor = Constants.Colors.blue
         }
     }
 }
