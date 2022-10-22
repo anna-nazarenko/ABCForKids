@@ -2,7 +2,7 @@
 //  LoopedVideoPlayerView.swift
 //  ABC
 //
-//  Created by Friendly Family Studio on 24.07.2022.
+//  Created by Family Studio on 24.07.2022.
 //
 
 import AVFoundation
