@@ -2,7 +2,7 @@
 //  AudioPlayer.swift
 //  ABC
 //
-//  Created by Friendly Family Studio on 27.08.2022.
+//  Created by Family Studio on 27.08.2022.
 //
 
 import AVFoundation

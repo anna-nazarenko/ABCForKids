@@ -2,7 +2,7 @@
 //  LetterCard.swift
 //  ABC
 //
-//  Created by Friendly Family Studio on 13.06.2022.
+//  Created by Family Studio on 13.06.2022.
 //
 
 import Foundation

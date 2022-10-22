@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  ABC
 //
-//  Created by Friendly Family Studio on 11.06.2022.
+//  Created by Family Studio on 11.06.2022.
 //
 
 import UIKit

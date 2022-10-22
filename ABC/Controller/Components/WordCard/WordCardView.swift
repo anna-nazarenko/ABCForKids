@@ -2,7 +2,7 @@
 //  WordCardView.swift
 //  ABC
 //
-//  Created by Friendly Family Studio on 14.08.2022.
+//  Created by Family Studio on 14.08.2022.
 //
 
 import UIKit
